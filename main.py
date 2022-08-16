@@ -1,4 +1,6 @@
 # main file
+import pandas as pd
+
 def get_channel_stats(youtube, channel_ids):
     all_data = []
     request = youtube.channels().list(
