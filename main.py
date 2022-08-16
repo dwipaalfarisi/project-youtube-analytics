@@ -143,7 +143,7 @@ def get_comments_in_videos(youtube, video_ids):
             )
             response = request.execute()
         
-            comments_in_video = [comment['snippet']['topLevelComment']['snippet']['textOriginal'] for comment in response['items'][0:10]]
+            comments_in_video = [comment['snippet']['topLevelComment']['snippet']['textOriginal'] for comment in response['items'][:]]
             comments_in_video_info = {'video_id': video_id, 'comments': comments_in_video}
 
             all_comments.append(comments_in_video_info)
